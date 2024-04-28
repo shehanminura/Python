@@ -1,0 +1,21 @@
+print(3)
+print(3>2)
+print(3>4)
+print(3==3)
+print(3!=4)  # "!" asaman thawaya  penwayi
+print(3!=3)
+print("chamidu")
+print('chamidu')
+#print(3=3)
+print(3==3)
+#print('shehan's house')
+print("shehan's house")
+print('he said "I came"')
+print(34+12)
+print(34-12)
+print(12*3)
+print(12/4)
+print(12%4)  #  %__modulus ( badimakadi ithiriya penwayi)
+print(12%5)
+print('3') # input ekama print viya yuthuya
+print(3*4) # output "12" penwayi
