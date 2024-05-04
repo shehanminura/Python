@@ -10,17 +10,9 @@ def overs_in_match():
     while over<2 and wickets < 4 :
         ball_in_over() #passing argument
         over += 1
-    else:
-        if wickets == 4 :
-            if ball ==6:
-                ball=0
-            else:
-                over -=1
-        elif over == 2:
-            ball = 0
-        
-        print_score()
-        print("Game Over")
+    
+    game_over()
+       
 
 def ball_in_over():
     global ball
@@ -47,6 +39,22 @@ def score_off_balls():
 
 def print_score():
         print(f'Total {total_runs}/{wickets} over : {over}.{ball}')
+
+
+def game_over():
+    global over,ball
+    if wickets == 4 :
+        if ball ==6:
+            ball=0
+        else:
+            over -=1
+    elif over == 2:
+        ball = 0
+    print_score()
+    print("Game Over")
+
+
+
 
 start_game()
 overs_in_match ()
