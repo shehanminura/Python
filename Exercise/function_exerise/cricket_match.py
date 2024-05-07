@@ -1,9 +1,10 @@
 def start_game():
-    global total_runs,wickets,ball,over
+    global total_runs,wickets,ball,over,batsmen,player_a,player_b
     total_runs=0
     wickets=0
     ball=0
     over=0
+    batsman=player_a
 
 def overs_in_match():
     global over ,ball
@@ -53,7 +54,12 @@ def game_over():
     print_score()
     print("Game Over")
 
-
+def player_change():
+    global batsmen,player_a,player_b,score 
+    if score == 1 or score == 3:
+        if batsmen == player_a:
+            batsmen == player_b
+        
 
 
 start_game()
