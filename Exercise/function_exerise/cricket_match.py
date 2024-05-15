@@ -6,15 +6,26 @@ class CricketMatch():
         self.wickets=0
         self.ball=0
         self.over=0
-        self.player_a="shehan"
-        self.player_b="hasaranga"
         self.player_a_runs=0
         self.player_b_runs=0
-        self.batsman=self.player_a
         self.player_a_ball=0
         self.player_b_ball=0
         self.star_a=""
         self.star_b=""
+        self.player_n=""
+        self.players_name=[]
+        self.add_players_Name()
+        self.player_a=self.players_name[0]
+        self.player_b=self.players_name[1]
+        self.batsman=self.player_a
+
+    
+
+    def add_players_Name(self):
+        for i in range (1,6):
+            player=input(f'player{i}:')
+            self.players_name.append(player)
+ 
 
     def overs_in_match(self):
         #global over ,ball
@@ -49,13 +60,14 @@ class CricketMatch():
 
         elif score.lower()=="w":
             self.wickets+=1
-            self.player_change_wickets()
+            if self.wickets<4:
+                self.player_change_wickets()
 
 
     def print_score(self):
+            
             self.star_mark()
             print(f'Total {self.total_runs}/{self.wickets} over : {self.over}.{self.ball}  {self.player_a} - {self.player_a_runs} ({self.player_a_ball}) {self.star_a} / {self.player_b} - {self.player_b_runs} ({self.player_b_ball}) {self.star_b}')
-            print(self)
 
     def game_over(self):
         #global over,ball
@@ -99,19 +111,16 @@ class CricketMatch():
         #global batsman, player_a, player_b, player_a_runs, player_b_runs,player_a_ball,player_b_ball
         if self.batsman==self.player_a:
             print(f'{self.player_a} Runs={self.player_a_runs}')
-            new_player=input("Enter new player :")
-            print(self)
+            self.player_a=self.players_name[self.wickets+1]
             self.player_a_runs=0
             self.player_a_ball=0
-            self.player_a=new_player
             self.batsman=self.player_a
             print(self.player_a)
         else:
             print(f'{self.player_b} Runs={self.player_b_runs}')
-            new_player=input("Enter new player :")
+            self.player_b=self.players_name[self.wickets+1]
             self.player_b_runs=0
             self.player_b_ball=0
-            self.player_b = new_player
             self.batsman=self.player_b
             print(self.player_b)
 
@@ -143,7 +152,7 @@ def main():
     secondBat.overs_in_match ()
     print(firstBat)
     print(secondBat)
-    
+
 
 if __name__ == "__main__":
     main()
