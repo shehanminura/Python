@@ -12,7 +12,7 @@ print(marks)#[23, 67, 99, 67, 4]
 marks.append('hi')
 print(marks)#[23, 67, 99, 67, 4, 'hi']
 marks[0]="Hello"
-print(marks)
+print(marks) #['Hello', 67, 99, 67, 4, 'hi']
 student=['shehan',"hasa",'achi','kaushi',]
 print(marks+student)#['Hello', 67, 99, 67, 4, 'hi', 'shehan', 'hasa', 'achi', 'kaushi']
 print(student.index("achi"))#1
