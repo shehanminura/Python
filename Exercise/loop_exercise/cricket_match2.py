@@ -19,7 +19,7 @@ def runs(over,ball,out,total_run,player_change):
         if out <= 3:
             play_change_wickets(mark)
         else:
-            break
+            return
 
 
     else:
@@ -37,7 +37,7 @@ def over_in_match(over,out):
     over = over + 1
     if out == 3:
         print(out)
-        break
+        return
 
 def player_run_change(batsman,player_A,player_B,mark,player_A_runs,player_B_runs,total_run):
     if int(mark) == 1 or int(mark) == 3:
