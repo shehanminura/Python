@@ -1,4 +1,4 @@
-dic={'cham':89,'dil':90,'fgh':87,True:'tyhj',(7,8):True} #LIST wanas kara haka [] namuth tapal wenas kara nohaka
+dic={'cham':89,'dil':90,'fgh':87,True:'tyhj',(7,8):True,"shehan":{'hi':5}} #LIST wanas kara haka [] namuth tapal wenas kara nohaka
 print(dic)
 #print([disc[1]])
 print(dic['dil'])
