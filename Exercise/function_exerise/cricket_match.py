@@ -18,8 +18,17 @@ class CricketMatch():
         self.player_a=self.players_name[0]
         self.player_b=self.players_name[1]
         self.batsman=self.player_a
+        
+        self.bollers_name=[]
+        
 
-    
+
+    def add_bollers(self):
+            baller=input("Enter Boller Name:")
+            if  baller not in  self.bollers_name:
+                self.bollers_name.append(baller)
+            else:
+                print("is in")
 
     def add_players_Name(self):
         for i in range (1,6):
@@ -30,6 +39,7 @@ class CricketMatch():
     def overs_in_match(self):
         #global over ,ball
         while self.over<2 and self.wickets < 4 :
+            self.add_bollers()
             self.ball_in_over() #passing argument
             self.over += 1
             self.over_change_player()
@@ -144,7 +154,7 @@ class T20 :
     pass
 
 def main():
-    firstBat =CricketMatch() #instance (object)\
+    firstBat =CricketMatch() #instance (object)
     secondBat =CricketMatch() 
     firstBat.start_game()
     firstBat.overs_in_match ()
@@ -152,6 +162,7 @@ def main():
     secondBat.overs_in_match ()
     print(firstBat)
     print(secondBat)
+
 
 
 if __name__ == "__main__":
